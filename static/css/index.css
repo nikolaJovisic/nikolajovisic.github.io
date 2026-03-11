@@ -115,13 +115,21 @@ a:hover {
   border: 1px solid rgba(22, 32, 42, 0.08);
   border-radius: 22px;
   background: #fff;
+  padding: 1rem;
 }
 
-.teaser-object {
+.teaser-image {
   display: block;
   width: 100%;
-  min-height: 560px;
-  border: 0;
+  height: auto;
+  border-radius: 14px;
+}
+
+.teaser-caption {
+  margin: 0.9rem 0 0;
+  color: #51606d;
+  font-size: 0.95rem;
+  text-align: center;
 }
 
 .panel-label {
@@ -239,7 +247,4 @@ pre {
     grid-template-columns: 1fr;
   }
 
-  .teaser-object {
-    min-height: 360px;
-  }
 }
