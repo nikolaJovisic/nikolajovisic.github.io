@@ -58,12 +58,6 @@
 
             <div class="publication-links">
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2603.09374" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
                 <a href="https://arxiv.org/abs/2603.09374v1" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="ai ai-arxiv"></i></span>
                   <span>arXiv</span>
@@ -76,39 +70,6 @@
                 </a>
               </span>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <div class="overview-panel">
-          <div class="overview-copy method-copy">
-            <p class="panel-label">Method Overview</p>
-            <h2 class="title is-3">A decoupled pipeline for efficient weakly supervised mammography classification</h2>
-            <p class="subtitle is-5">
-              The teaser summarizes the MIL-PF workflow: a frozen foundation encoder extracts patch-level and global
-              visual representations, those features are precomputed once, and a compact attention-based MIL head
-              learns how to combine view-level context with sparse lesion evidence for final breast-level prediction.
-            </p>
-            <p class="method-note">
-              This design keeps the most expensive computation fixed while preserving the flexibility to iterate on the
-              aggregation strategy, making large-scale experimentation much more practical than repeated end-to-end
-              fine-tuning.
-            </p>
-          </div>
-          <div class="teaser-figure">
-            <img
-              src="./mil-pf-method.png"
-              alt="MIL-PF method overview diagram"
-              class="teaser-image">
-            <p class="teaser-caption">
-              Method figure from the paper.
-              <a href="./mil-pf-method.pdf">Open the original PDF</a>.
-            </p>
           </div>
         </div>
       </div>
@@ -146,6 +107,30 @@
     </div>
   </section>
 
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="overview-panel">
+          <div class="overview-copy method-copy">
+            <p class="panel-label">Method Overview</p>
+            <h2 class="title is-3">A decoupled pipeline for efficient weakly supervised mammography classification</h2>
+            <p class="subtitle is-5">
+              A frozen foundation encoder extracts patch-level and global
+              visual representations and a compact attention-based MIL head
+              learns how to combine view-level context with sparse lesion evidence for final breast-level prediction.
+            </p>
+          </div>
+          <div class="teaser-figure">
+            <img
+              src="./mil-pf-method.png"
+              alt="MIL-PF method overview diagram"
+              class="teaser-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section section-alt" id="overview">
     <div class="container is-max-desktop">
       <div class="columns is-variable is-6">
@@ -171,12 +156,12 @@
               <p class="stat-label">Trainable parameters in the MIL head</p>
             </div>
             <div class="stat-card">
-              <p class="stat-value">Frozen</p>
+              <p class="stat-value">Feature precomputing</p>
               <p class="stat-label">Foundation encoder during downstream training</p>
             </div>
             <div class="stat-card">
-              <p class="stat-value">MIL</p>
-              <p class="stat-label">Attention-based aggregation of global and sparse cues</p>
+              <p class="stat-value">Perceiver-attention MIL</p>
+              <p class="stat-label">Attention-based aggregation of sparse cues</p>
             </div>
           </div>
         </div>
@@ -208,21 +193,6 @@
                 <p>Project code is available publicly to support verification, extension, and direct reuse in follow-up work.</p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3 has-text-centered">Links</h2>
-          <div class="content has-text-centered links-block">
-            <p><a href="https://arxiv.org/abs/2603.09374v1">arXiv abstract page</a></p>
-            <p><a href="https://arxiv.org/pdf/2603.09374">PDF</a></p>
-            <p><a href="https://github.com/nikolaJovisic/mil-pf-research">GitHub repository</a></p>
           </div>
         </div>
       </div>
