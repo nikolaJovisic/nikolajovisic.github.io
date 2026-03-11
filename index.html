@@ -2,54 +2,198 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="description" content="Nikola Jovisic - AI R&D Engineer and PhD candidate working on medical imaging, foundation models, and production-ready ML systems.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nikola Jovisic</title>
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      font-family: "Noto Sans", sans-serif;
-      color: #16202a;
-      background: linear-gradient(180deg, #fcfcf8 0%, #eef3ef 100%);
-    }
-
-    main {
-      max-width: 42rem;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    h1 {
-      margin-bottom: 0.5rem;
-      font-family: "Google Sans", "Noto Sans", sans-serif;
-      font-size: clamp(2rem, 6vw, 3.5rem);
-      line-height: 1.05;
-    }
-
-    p {
-      color: #465563;
-      font-size: 1.05rem;
-    }
-
-    a {
-      color: #136f63;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="./static/css/home.css">
+  <link rel="icon" href="./static/images/favicon.svg">
 </head>
 <body>
-  <main>
-    <h1>Nikola Jovisic</h1>
-    <p>Personal site landing page coming next.</p>
-    <p>Current paper page: <a href="/mil-pf/">MIL-PF</a></p>
-  </main>
+  <section class="hero home-hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-variable is-7 is-vcentered">
+          <div class="column is-7">
+            <h1 class="title home-title">Nikola Jovišić</h1>
+            <h6 class="title is-3">AI R&amp;D engineer | PhD Candidate</h6>
+            <p class="home-subtitle">
+              I work on foundation-model-based medical imaging, weak supervision, and practical ML deployment.
+              My recent work spans mammography classification, explainability, generative modeling, and research
+              systems designed for actual clinical and product settings.
+            </p>
+            <div class="home-links">
+              <a class="button is-dark is-rounded" href="mailto:nikolajovisic4@gmail.com">Email</a>
+              <a class="button is-light is-rounded" href="https://linkedin.com/in/nikolajovisic">LinkedIn</a>
+            </div>
+          </div>
+          <div class="column is-5">
+            <div class="profile-panel image-panel">
+              <img src="./me.jpg" alt="Portrait of Nikola Jovisic" class="profile-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-variable is-7">
+        <div class="column is-7">
+          <h2 class="title is-3">About</h2>
+          <div class="content about-copy">
+            <p>
+              My work sits between research and engineering. I care about models that are not only strong on paper,
+              but also efficient, explainable, and realistic to integrate into production workflows.
+            </p>
+            <p>
+              Recently I have focused on high-resolution mammography, where weak supervision, large image sizes, and
+              clinical constraints force careful system design. That includes compact aggregation models on top of
+              frozen encoders, explainability mechanisms, and pipelines that make iteration substantially cheaper.
+            </p>
+            <p>
+              I am currently pursuing a PhD in Artificial Intelligence at the Faculty of Technical Sciences, University
+              of Novi Sad.
+            </p>
+          </div>
+        </div>
+        <div class="column is-5">
+          <div class="stat-stack">
+            <div class="stat-card">
+              <p class="stat-value">Medical Imaging</p>
+              <p class="stat-label">Mammography classification, generation, explainability</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-value">Foundation Models</p>
+              <p class="stat-label">Frozen encoders, SSL adaptation, efficient downstream learning</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-value">Production Mindset</p>
+              <p class="stat-label">APIs, deployment, monitoring, practical ML systems</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Featured Work</h2>
+      <div class="columns is-variable is-5">
+        <div class="column">
+          <a class="project-card" href="/mil-pf/">
+            <p class="project-kicker">Paper/Project Page</p>
+            <h3>MIL-PF</h3>
+            <p>
+              Multiple Instance Learning on Precomputed Features for Mammography Classification. A lightweight
+              attention-based MIL framework built on frozen foundation features for scalable clinical classification.
+            </p>
+          </a>
+        </div>
+        <div class="column">
+          <a class="project-card" href="https://milica-skipina.github.io/MAMBO/">
+            <p class="project-kicker">Paper/Project Page</p>
+            <h3>MAMBO</h3>
+            <p>
+              A high-resolution mammography generation project built around a diffusion ensemble aimed at realistic
+              synthesis and strong radiologist-facing quality.
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Experience</h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-head">
+            <h3>Institute for AI R&amp;D of Serbia</h3>
+            <p>Research Engineer | April 2023 - present</p>
+          </div>
+          <p>
+            Co-led work on MAMBO, a high-resolution mammography generation system, adapted self-supervised foundation
+            models for medical imaging, and currently work on flow-matching over SSL representation spaces for weakly
+            supervised learning and data augmentation.
+          </p>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-head">
+            <h3>United Nations Development Programme</h3>
+            <p>AI Engineer / Consultant | January 2024 - November 2025</p>
+          </div>
+          <p>
+            Designed and led development of a vision-foundation-model-based mammography classification and risk
+            prediction system with explainability, then led on-prem deployment of the supporting AI API and model
+            monitoring stack.
+          </p>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-head">
+            <h3>Diffine</h3>
+            <p>R&amp;D Engineer | July 2022 - March 2023</p>
+          </div>
+          <p>
+            Built a 3D CNN instance segmentation pipeline with custom voxel/vector-space
+            processing.
+          </p>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-head">
+            <h3>Schneider Electric</h3>
+            <p>Student Intern | September 2019 - July 2022</p>
+          </div>
+          <p>
+            Developed a Roslyn-based automated refactoring tool for enterprise .NET systems using domain-driven design
+            and test-driven development principles.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container is-max-desktop">
+      <div class="columns is-variable is-7">
+        <div class="column">
+          <h2 class="title is-3">Education</h2>
+          <div class="edu-card">
+            <h3>Faculty of Technical Sciences, University of Novi Sad</h3>
+            <p>PhD, Artificial Intelligence | 2023 - present</p>
+            <p>MSc, Intelligent Systems | 2022 - 2023 | GPA 10/10</p>
+            <p>BSc, Computer Science | 2018 - 2022 | GPA 9.5/10</p>
+          </div>
+        </div>
+        <div class="column">
+          <h2 class="title is-3">Skills</h2>
+          <div class="skills-grid">
+            <span>Python</span>
+            <span>PyTorch</span>
+            <span>Hugging Face</span>
+            <span>FastAPI</span>
+            <span>REST</span>
+            <span>Docker</span>
+            <span>W&amp;B</span>
+            <span>Git</span>
+            <span>Linux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer home-footer">
+    <div class="container is-max-desktop">
+      <div class="content has-text-centered">
+        <p>nikolajovisic4@gmail.com | <a href="https://linkedin.com/in/nikolajovisic">LinkedIn</a></p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

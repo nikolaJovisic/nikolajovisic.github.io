@@ -63,6 +63,11 @@ a:hover {
   margin-top: 1rem;
 }
 
+.publication-institutions {
+  margin-top: 0.65rem;
+  color: #4d5b68;
+}
+
 .author-block {
   display: inline-block;
   margin: 0 0.2rem;
@@ -185,6 +190,20 @@ a:hover {
 .abstract-block p,
 .content p {
   color: #243340;
+}
+
+.xai-figure {
+  padding: 1rem;
+  border: 1px solid rgba(22, 32, 42, 0.08);
+  border-radius: 22px;
+  background: #fff;
+}
+
+.xai-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
 }
 
 .stats-panel {

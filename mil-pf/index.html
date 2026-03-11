@@ -49,10 +49,17 @@
             <p class="eyebrow">arXiv 2026</p>
             <h1 class="title is-1 publication-title">MIL-PF: Multiple Instance Learning on Precomputed Features for Mammography Classification</h1>
             <div class="is-size-5 publication-authors">
-              <span class="author-block">Nikola Jovišić,</span>
-              <span class="author-block">Milica Škipina,</span>
-              <span class="author-block">Nicola Dall'Asen,</span>
-              <span class="author-block">Dubravko Ćulibrk</span>
+              <span class="author-block"><a href="https://nikolajovisic.github.io/">Nikola Jovišić</a><sup>1,2</sup>,</span>
+              <span class="author-block"><a href="https://milica-skipina.github.io/">Milica Škipina</a><sup>1,2,3</sup>,</span>
+              <span class="author-block"><a href="https://fodark.xyz">Nicola Dall'Asen</a><sup>3,4,5</sup>,</span>
+              <span class="author-block"><a href="https://dculibrk.github.io/">Dubravko Ćulibrk</a><sup>2</sup></span>
+            </div>
+            <div class="is-size-6 publication-institutions">
+              <span class="author-block"><sup>1</sup><a href="https://ivi.ac.rs/en/">Institute for AI R&amp;D of Serbia</a>,</span>
+              <span class="author-block"><sup>2</sup><a href="https://ftn.uns.ac.rs/">Faculty of Technical Sciences, University of Novi Sad</a>,</span>
+              <span class="author-block"><sup>3</sup><a href="https://www.unitn.it/en">University of Trento</a>,</span>
+              <span class="author-block"><sup>4</sup><a href="https://www.unipi.it/">University of Pisa</a>,</span>
+              <span class="author-block"><sup>5</sup><a href="https://www.fbk.eu/en/">Fondazione Bruno Kessler</a></span>
             </div>
             <p class="publication-tagline">Frozen foundation encoders, precomputed representations, and a lightweight MIL head for scalable mammography classification.</p>
 
@@ -168,6 +175,31 @@
       </div>
     </div>
   </section>
+  <section class="section section-alt" id="xai">
+    <div class="container is-max-desktop">
+      <div class="columns is-vcentered is-variable is-6">
+        <div class="column is-7">
+          <div class="xai-figure">
+            <img src="./xai.png" alt="MIL-PF explainability heatmaps over mammography examples" class="xai-image">
+          </div>
+        </div>
+        <div class="column is-5">
+          <div class="content">
+            <h2 class="title is-3">Explainability</h2>
+            <p>
+              The examples visualize the spatial evidence used by MIL-PF through heatmaps over the mammography
+              images. Ground-truth lesion annotations are shown in green, while MIL-PF predictions are shown in red.
+            </p>
+            <p>
+              The highlighted regions are computed by overlapping the sliding-window of the local stream, so
+              the final map reflects how often strongly contributing local windows cover each image location.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <section class="section" id="contributions">
     <div class="container is-max-desktop">
