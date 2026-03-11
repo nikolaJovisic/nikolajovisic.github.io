@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Project page for MIL-PF: Multiple Instance Learning on Precomputed Features for Mammography Classification.">
+  <meta name="keywords" content="MIL-PF, mammography, multiple instance learning, medical imaging, foundation models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MIL-PF: Multiple Instance Learning on Precomputed Features for Mammography Classification</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script defer src="./static/js/index.js"></script>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item nav-home" href="#top" aria-label="MIL-PF home">
+        <span class="icon">
+          <i class="fas fa-microscope"></i>
+        </span>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="paper-nav">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="paper-nav" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="#abstract">Abstract</a>
+        <a class="navbar-item" href="#overview">Overview</a>
+        <a class="navbar-item" href="#contributions">Contributions</a>
+        <a class="navbar-item" href="#bibtex">BibTeX</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero publication-header" id="top">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <p class="eyebrow">arXiv 2026</p>
+            <h1 class="title is-1 publication-title">MIL-PF: Multiple Instance Learning on Precomputed Features for Mammography Classification</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Nikola Jovišić,</span>
+              <span class="author-block">Milica Škipina,</span>
+              <span class="author-block">Nicola Dall'Asen,</span>
+              <span class="author-block">Dubravko Ćulibrk</span>
+            </div>
+            <p class="publication-tagline">Frozen foundation encoders, precomputed representations, and a lightweight MIL head for scalable mammography classification.</p>
+
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2603.09374" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2603.09374v1" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/nikolaJovisic/mil-pf-research" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="overview-panel">
+          <div class="overview-copy">
+            <p class="panel-label">Method At A Glance</p>
+            <h2 class="title is-3">Clinical-scale classification without end-to-end retraining</h2>
+            <p class="subtitle is-5">
+              MIL-PF precomputes high-level features with frozen vision foundation models and trains only a compact
+              attention-based multiple instance learning head, reducing optimization cost while preserving strong
+              breast-level classification performance.
+            </p>
+          </div>
+          <div class="overview-grid" aria-label="MIL-PF pipeline overview">
+            <div class="overview-card">
+              <span class="card-step">1</span>
+              <h3>Frozen Encoder</h3>
+              <p>Extract semantic representations from high-resolution mammograms once, then reuse them across experiments.</p>
+            </div>
+            <div class="overview-card">
+              <span class="card-step">2</span>
+              <h3>Precomputed Features</h3>
+              <p>Decouple expensive representation learning from downstream training to simplify iteration and scaling.</p>
+            </div>
+            <div class="overview-card">
+              <span class="card-step">3</span>
+              <h3>Lightweight MIL Head</h3>
+              <p>Aggregate global tissue context and sparse local lesion evidence with a compact attention-based module.</p>
+            </div>
+            <div class="overview-card">
+              <span class="card-step">4</span>
+              <h3>Efficient Adaptation</h3>
+              <p>Reach state-of-the-art classification performance with roughly 40k trainable parameters.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="abstract">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified abstract-block">
+            <p>
+              Modern foundation models provide highly expressive visual representations, yet adapting them to
+              high-resolution medical imaging remains challenging due to limited annotations and weak supervision.
+              Mammography, in particular, is characterized by large images, variable multi-view studies and
+              predominantly breast-level labels, making end-to-end fine-tuning computationally expensive and often
+              impractical.
+            </p>
+            <p>
+              We propose Multiple Instance Learning on Precomputed Features (MIL-PF), a scalable framework that
+              combines frozen foundation encoders with a lightweight MIL head for mammography classification. By
+              precomputing the semantic representations and training only a small task-specific aggregation module
+              (40k parameters), the method enables efficient experimentation and adaptation without retraining large
+              backbones.
+            </p>
+            <p>
+              The architecture explicitly models the global tissue context and the sparse local lesion signals through
+              attention-based aggregation. MIL-PF achieves state-of-the-art classification performance at clinical
+              scale while substantially reducing training complexity. We release the code for full reproducibility.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="overview">
+    <div class="container is-max-desktop">
+      <div class="columns is-variable is-6">
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3">Overview</h2>
+            <p>
+              The central idea is to move the expensive part of training out of the optimization loop. Instead of
+              repeatedly fine-tuning a large visual backbone on high-resolution mammograms, MIL-PF extracts features
+              once with a frozen encoder and performs downstream learning on those stored representations.
+            </p>
+            <p>
+              This shifts experimentation toward the aggregation layer, where a compact MIL head can focus on
+              combining local lesion evidence with broader tissue context across views. The result is a much cheaper
+              training setup that is still appropriate for weakly supervised breast-level prediction.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="stats-panel">
+            <div class="stat-card">
+              <p class="stat-value">40k</p>
+              <p class="stat-label">Trainable parameters in the MIL head</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-value">Frozen</p>
+              <p class="stat-label">Foundation encoder during downstream training</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-value">MIL</p>
+              <p class="stat-label">Attention-based aggregation of global and sparse cues</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contributions">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3 has-text-centered">Contributions</h2>
+          <div class="columns is-variable is-5 contribution-columns">
+            <div class="column">
+              <div class="contribution-card">
+                <h3 class="title is-5">Scalable Training Setup</h3>
+                <p>Separates foundation feature extraction from task learning so experiments no longer require repeated large-model retraining.</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="contribution-card">
+                <h3 class="title is-5">Weak Supervision Fit</h3>
+                <p>Targets mammography classification under breast-level labels, where sparse lesions and multi-view context must be reconciled.</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="contribution-card">
+                <h3 class="title is-5">Reproducible Release</h3>
+                <p>Project code is available publicly to support verification, extension, and direct reuse in follow-up work.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">Links</h2>
+          <div class="content has-text-centered links-block">
+            <p><a href="https://arxiv.org/abs/2603.09374v1">arXiv abstract page</a></p>
+            <p><a href="https://arxiv.org/pdf/2603.09374">PDF</a></p>
+            <p><a href="https://github.com/nikolaJovisic/mil-pf-research">GitHub repository</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="bibtex">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3 has-text-centered">BibTeX</h2>
+      <pre><code>@article{jovisic2026milpf,
+  title   = {MIL-PF: Multiple Instance Learning on Precomputed Features for Mammography Classification},
+  author  = {Jovi{\v{s}}i{\'c}, Nikola and {\v{S}}kipina, Milica and Dall'Asen, Nicola and {\'C}ulibrk, Dubravko},
+  journal = {arXiv preprint arXiv:2603.09374},
+  year    = {2026}
+}</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://arxiv.org/pdf/2603.09374" aria-label="Paper PDF">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/nikolaJovisic/mil-pf-research" aria-label="GitHub repository">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              Website structure adapted from the
+              <a href="https://github.com/nerfies/nerfies.github.io">Nerfies project page template</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
