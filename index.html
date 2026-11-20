@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Nikola Jovisic - AI R&D Engineer and PhD candidate working on medical imaging, foundation models, and production-ready ML systems.">
+  <meta name="description" content="Nikola Jovisic - AI Engineer and PhD candidate working on vision foundation models, generative models, and LLM agents.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nikola Jovisic</title>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
@@ -18,11 +18,11 @@
         <div class="columns is-variable is-7 is-vcentered">
           <div class="column is-7">
             <h1 class="title home-title">Nikola Jovišić</h1>
-            <h6 class="title is-3">AI R&amp;D engineer | PhD Candidate</h6>
+            <h6 class="title is-3">AI Engineer | PhD Candidate in AI</h6>
             <p class="home-subtitle">
-              I work on foundation-model-based medical imaging, weak supervision, and practical ML deployment.
-              My recent work spans mammography classification, explainability, generative modeling, and research
-              systems designed for actual clinical and product settings.
+              I work on vision foundation models and generative models for high-resolution images with scarce, weak
+              labels, from problem formulation to working systems. My recent work includes a first-author MICCAI 2026
+              paper, full-resolution diffusion-based image synthesis (patent in approval phase), and LLM agents.
             </p>
             <div class="home-links">
               <a class="button is-dark is-rounded" href="mailto:nikolajovisic4@gmail.com">Email</a>
@@ -50,29 +50,35 @@
               but also efficient, explainable, and realistic to integrate into production workflows.
             </p>
             <p>
-              Recently I have focused on high-resolution mammography, where weak supervision, large image sizes, and
-              clinical constraints force careful system design. That includes compact aggregation models on top of
-              frozen encoders, explainability mechanisms, and pipelines that make iteration substantially cheaper.
+              Most of my research has been on high-resolution mammography at clinical scale (terabytes of images),
+              where weak supervision, large image sizes and clinical constraints force careful system design. That
+              covers lightweight multiple instance learning heads on frozen foundation encoders, explainability without
+              dense annotations, diffusion models for full-resolution synthesis, and flow matching over sets of
+              representations.
             </p>
             <p>
-              I am currently pursuing a PhD in Artificial Intelligence at the Faculty of Technical Sciences, University
-              of Novi Sad.
+              At HTEC I build internal LLM agents for a large Silicon Valley client. I have been a heavy LLM user since
+              day one of ChatGPT, and Claude Code is my daily driver.
+            </p>
+            <p>
+              I am pursuing a PhD in Artificial Intelligence at the Faculty of Technical Sciences, University of Novi
+              Sad, expected to finish in Q2 2027.
             </p>
           </div>
         </div>
         <div class="column is-5">
           <div class="stat-stack">
             <div class="stat-card">
-              <p class="stat-value">Medical Imaging</p>
-              <p class="stat-label">Mammography classification, generation, explainability</p>
+              <p class="stat-value">Generative Models</p>
+              <p class="stat-label">Diffusion, flow matching, high-resolution synthesis</p>
             </div>
             <div class="stat-card">
               <p class="stat-value">Foundation Models</p>
               <p class="stat-label">Frozen encoders, SSL adaptation, efficient downstream learning</p>
             </div>
             <div class="stat-card">
-              <p class="stat-value">Production Mindset</p>
-              <p class="stat-label">APIs, deployment, monitoring, practical ML systems</p>
+              <p class="stat-value">Research to Production</p>
+              <p class="stat-label">LLM agents, APIs, deployment, monitoring</p>
             </div>
           </div>
         </div>
@@ -86,27 +92,32 @@
       <div class="columns is-variable is-5">
         <div class="column">
           <a class="project-card" href="/mil-pf/">
-            <p class="project-kicker">Paper/Project Page</p>
+            <img class="project-thumb" src="./static/images/card-milpf.jpg" alt="MIL-PF attention maps localizing lesions">
+            <p class="project-kicker">MICCAI 2026 · First author</p>
             <h3>MIL-PF</h3>
             <p>
-              Multiple Instance Learning on Precomputed Features for Mammography Classification. A lightweight
-              attention-based MIL framework built on frozen foundation features for scalable clinical classification.
+              Multiple Instance Learning on Precomputed Features for Mammography Classification. A lightweight,
+              domain-fitted attention MIL head on frozen foundation features: state of the art on three datasets, and
+              up to 20% higher specificity than prior methods at 90% sensitivity.
             </p>
           </a>
         </div>
         <div class="column">
           <a class="project-card" href="https://milica-skipina.github.io/MAMBO/">
-            <p class="project-kicker">Paper/Project Page</p>
+            <img class="project-thumb" src="./static/images/card-mambo.jpg" alt="Synthetic 3840x3840 mammogram generated by MAMBO">
+            <p class="project-kicker">Patent in approval phase</p>
             <h3>MAMBO</h3>
             <p>
-              A high-resolution mammography generation project built around a diffusion ensemble aimed at realistic
-              synthesis and strong radiologist-facing quality.
+              A diffusion ensemble that generates realistic mammograms at up to 3840×3840 px, conditioning patch
+              generation on global and local context. Radiologists in a blinded study struggled to tell synthetic
+              images from real ones.
             </p>
           </a>
         </div>
         <div class="column">
           <a class="project-card" href="https://arxiv.org/abs/2604.16362">
-            <p class="project-kicker">Paper</p>
+            <img class="project-thumb" src="./static/images/card-setflow.jpg" alt="SetFlow overview">
+            <p class="project-kicker">SpliTech 2026 · First author</p>
             <h3>SetFlow</h3>
             <p>
               A flow-matching generative model that synthesizes entire MIL bags directly in representation space, using
@@ -125,11 +136,20 @@
       <div class="timeline">
         <article class="timeline-item">
           <div class="timeline-head">
-            <h3>Takasago International Corporation</h3>
-            <p>AI Consultant | April 2026 - present</p>
+            <h3>HTEC</h3>
+            <p>AI Engineer | July 2026 - present</p>
           </div>
           <p>
-            Engaging with the executive sponsor to define project vision and lead end-to-end delivery of an agentic AI
+            Building internal AI agents for a large Silicon Valley client.
+          </p>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-head">
+            <h3>Takasago International Corporation</h3>
+            <p>AI Consultant | April 2026 - August 2026</p>
+          </div>
+          <p>
+            Worked with the executive sponsor to define the project vision and led end-to-end delivery of an agentic AI
             for automated analytics over tabular business data.
           </p>
         </article>
@@ -139,9 +159,9 @@
             <p>Research Engineer | April 2023 - April 2026</p>
           </div>
           <p>
-            Co-led work on MAMBO, a high-resolution mammography generation system, adapted self-supervised foundation
-            models for medical imaging, and currently work on flow-matching over SSL representation spaces for weakly
-            supervised learning and data augmentation.
+            Co-led MAMBO, a high-resolution mammography generation system; adapted self-supervised foundation models
+            for medical imaging; developed SetFlow, flow matching over SSL representation spaces for weakly supervised
+            learning and data augmentation. TA at Google DeepMind EEML 2024; mentored MSc and BSc students.
           </p>
         </article>
         <article class="timeline-item">
@@ -150,9 +170,7 @@
             <p>AI Engineer / Consultant | January 2024 - November 2025</p>
           </div>
           <p>
-            Designed and led development of a vision-foundation-model-based mammography classification and risk
-            prediction system with explainability, then led on-prem deployment of the supporting AI API and model
-            monitoring stack.
+            Productionization and deployment of a downstream mammography classification model.
           </p>
         </article>
         <article class="timeline-item">
@@ -186,7 +204,7 @@
           <h2 class="title is-3">Education</h2>
           <div class="edu-card">
             <h3>Faculty of Technical Sciences, University of Novi Sad</h3>
-            <p>PhD, Artificial Intelligence | 2023 - present</p>
+            <p>PhD, Artificial Intelligence | 2023 - expected Q2 2027</p>
             <p>MSc, Intelligent Systems | 2022 - 2023 | GPA 10/10</p>
             <p>BSc, Computer Science | 2018 - 2022 | GPA 9.5/10</p>
           </div>
@@ -203,6 +221,8 @@
             <span>W&amp;B</span>
             <span>Git</span>
             <span>Linux</span>
+            <span>LLM agents</span>
+            <span>Claude Code</span>
           </div>
         </div>
       </div>
